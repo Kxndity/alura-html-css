@@ -1,8 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+ }
 body {
+    height:100vh;
+    /*  é utilizada para alterar a propriedade padrão da box model, usada para calcular larguras (widths) e alturas */
+    box-sizing: border-box;
     background-color: black;
-    color: #f6f6f6
+    color: #f6f6f6;
 }
 
-strong{
+.titulo-destaque{
     color: #22DAFD;
 }
+
+.apresentacao {
+    display: flex;
+    align-items: center;
+}
+

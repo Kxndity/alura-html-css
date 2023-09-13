@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap");
 
+:root {
+  --cor--primaria: #000000;
+  --cor--secundaria: #f6f6f6;
+  --cor--terciaria: #22dafd;
+  --cor--hover: #272727;
+
+  --font--primaria: "Krona One", sans-serif;
+  --font--secundaria: "Montserrat, sans-serif";
+}
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +18,8 @@ body {
   /* height: 100vh; */
   /*  é utilizada para alterar a propriedade padrão da box model, usada para calcular larguras (widths) e alturas */
   box-sizing: border-box;
-  background-color: black;
-  color: #f6f6f6;
+  background-color: var(--cor--primaria);
+  color: var(--cor--secundaria);
 }
 
 .cabecalho {
@@ -22,10 +31,10 @@ body {
 }
 
 .cabecalho__menu__link {
-  font-family: "Montserrat, sans-serif";
+  font-family: var(--font--secundaria);
   font-size: 24px;
   font-weight: 600;
-  color: #22dafd;
+  color: var(--cor--terciaria);
   text-decoration: none;
 }
 
@@ -36,10 +45,11 @@ body {
   align-items: center;
   /*  é empregada para alinhar os elementos ao longo do eixo principal, */
   justify-content: space-between;
+  gap: 82px;
 }
 /* alterar titulo princip */
 .apresentacao__conteudo {
-  width: 615px;
+  width: 50%;
   display: flex;
   flex-direction: column;
   /* A propriedade gap não é exclusiva do Flexbox, porém é utilizada quase sempre em conjunto com ele. */
@@ -48,17 +58,17 @@ body {
 /* alterar titulo h1 */
 .apresentacao__conteudo__titulo {
   font-size: 36px;
-  font-family: "Krona One", sans-serif;
+  font-family: var(--font--primaria);
 }
 
 .titulo-destaque {
-  color: #22dafd;
+  color: var(--cor--terciaria);
 }
 
 /* alterar paragrafo */
 .apresentacao__conteudo__texto {
   font-size: 24px;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font--secundaria);
 }
 
 .apresentacao__links {
@@ -70,45 +80,67 @@ body {
 }
 
 .apresentacao__links__subtitulos {
-  font-family: "Krona One", sans-serif;
+  font-family: var(--font--secundaria);
   font-weight: 400;
   font-size: 24px;
 }
 
-.apresentacao__links__link {
+.apresentacao__links__navegacao {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
-  border: 2px solid #22dafd;
-  width: 388px;
+  border: 2px solid var(--cor--terciaria);
+  width: 50%;
   text-align: center;
   border-radius: 8px;
   font-size: 24px;
   font-weight: 600;
   padding: 21.5px 0;
   text-decoration: none;
-  color: #f6f6f6;
-  font-family: "Montserrat", sans-serif;
+  color: var(--cor--secundaria);
+  font-family: var(--font--secundaria);
 }
 
-.apresentacao__links__link:hover {
-  background-color: #272727;
+.apresentacao__links__navegacao:hover {
+  background-color: var(--cor--hover);
   /* isso paulo ensinou */
   transition: all 0.9s;
 }
 
 /* isso paulo ensinou */
-.apresentacao__links__link img {
+.apresentacao__links__navegacao img {
   width: 40px;
+}
+
+.apresentacao__imagem {
+  width: 50%;
 }
 
 .rodape {
   padding: 24px;
-  color: black;
-  background-color: #22dafd;
+  color: var(--cor--primaria);
+  background-color: var(--cor--terciaria);
   text-align: center;
-  font-family: "Montserrat, sans-serif";
+  font-family: var(--font--secundaria);
   font-size: 24px;
   font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+  .cabecalho {
+    padding: 10%;
+  }
+
+  .cabecalho__menu {
+    justify-content: center;
+  }
+
+  .apresentacao {
+    flex-direction: column-reverse;
+    padding: 5%;
+  }
+  .apresentacao__conteudo {
+    width: auto;
+  }
 }

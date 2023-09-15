@@ -1,60 +1,79 @@
 <!--  é uma declaração para informar ao navegador qual é a versão do HTML utilizada no arquivo -->
 <!DOCTYPE html>
 <html lang="pt-br">
+  <!-- providencia informações gerais (metadados) sobre o documento, incluindo seu título e links para scripts e folhas de estilos -->
+  <head>
+    <!-- Meta tags são elementos (comandos em HTML) que você cria para descrever o conteúdo de uma página para os mecanismos de busca. -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE+edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
 
-<!-- providencia informações gerais (metadados) sobre o documento, incluindo seu título e links para scripts e folhas de estilos -->
-<head>
-     <!-- Meta tags são elementos (comandos em HTML) que você cria para descrever o conteúdo de uma página para os mecanismos de busca. -->
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE+edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Portfolio</title>
-     <link rel="stylesheet" href="./styles/styles.css">
-</head>
+  <!--  representa o conteúdo de um documento HTML. -->
+  <body>
+    <header class="cabecalho">
+      <nav class="cabecalho__menu">
+        <a class="cabecalho__menu__link" href="index.html">Home</a>
+        <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
+        <a class="cabecalho__menu__link" href="curriculo.html">Curriculo</a>
+      </nav>
+    </header>
+    <!-- main--- define o conteúdo principal dentro do <body> em seu documento ou aplicação -->
+    <main class="apresentacao">
+      <section class="apresentacao__conteudo">
+        <h1 class="apresentacao__conteudo__titulo">
+          Seja Bem-vindo ao meu
+          <strong class="titulo-destaque">Porfólio!</strong>
+        </h1>
+        <p class="apresentacao__conteudo__texto">
+          Olá! Sou Isabelly Essa página que você está vendo foi desenvolvida com
+          <strong class="conteudo-destaque">HTML e CSS</strong>, onde coloquei
+          em prática uma série de conhecimentos adquiridos através dos cursos da
+          plataforma Alura. Esse é o
+          <strong class="conteudo-destaque">primeiro</strong> de muitos desafios
+          pela frente!
+        </p>
+        <!-- A tag <div> define uma divisão em um documento HTML e costuma ser usada como um contêiner para outros elementos, o que ajuda na estilização do bloco -->
+        <div class="apresentacao__links">
+          <h2 class="apresentacao__links__subtitulos">
+            <strong class="conteudo-destaque">Acesse minhas redes:</strong>
+          </h2>
+          <!-- <usado no HTML para fazer referência a uma URL externa, seja um link ou um arquivo. -->
+          <a
+            class="apresentacao__links__navegacao"
+            href="https://github.com/kxndity"
+          >
+            <img src="./assets/github.svg " />
+            Github
+          </a>
 
+          <a
+            class="apresentacao__links__navegacao"
+            href="https://instagram.com/kxndity"
+          >
+            <img src="./assets/instagram.svg " />
+            instagram
+          </a>
 
-<!--  representa o conteúdo de um documento HTML. -->
-<body>
-     <header class="cabecalho">
-          <nav class="cabecalho__menu">
-               <a class="cabecalho__menu__link" href="index.html">Home</a>
-               <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
-          </nav>
-     </header>
-     <!-- main--- define o conteúdo principal dentro do <body> em seu documento ou aplicação -->
-     <main class="apresentacao">
-           <section class="apresentacao__conteudo">
-               <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível <strong class="titulo-destaque">com um Front-end de qualidade!</strong></h1>
-               <p class="apresentacao__conteudo__texto">Olá! Sou Joana Santos, desenvolvedora Front-end com especialidade em React, HTML e CSS.</strong> Ajudo pequenos
-               negócios e designers a colocarem em prática boas ideias. Vamos conversar?</p>
-               <!-- A tag <div> define uma divisão em um documento HTML e costuma ser usada como um contêiner para outros elementos, o que ajuda na estilização do bloco -->
-               <div class="apresentacao__links"> 
-                    <h2 class="apresentacao__links__subtitulos">Acesse minhas redes:</h2>
-               <!-- <usado no HTML para fazer referência a uma URL externa, seja um link ou um arquivo. -->
-                    <a class="apresentacao__links__navegacao" href="https://github.com/kxndity">
-                         <img src="./assets/github.svg " >
-                       Github
-                    </a>
-
-                    <a class="apresentacao__links__navegacao" href="https://instagram.com/kxndity">
-                         <img src="./assets/instagram.svg " >
-                       instagram
-                    </a>
-                    
-                    <a class="apresentacao__links__navegacao" href="https://linkedin.com/in/isabelly-moreira-28bb2b269">
-                         <img src="./assets/linkedIn.svg " >
-                       linkedin
-
-                    </a>
-                    
-               </div>
-           </section>
-                    <img class="apresentacao__imagem"src="./assets/Imagem.png" alt="foto de Jona"> 
-
-     </main>
-     <footer class="rodape">
-          <p>Desenvolvido por Alura.</p>
-     </footer>
-</body>
-
+          <a
+            class="apresentacao__links__navegacao"
+            href="https://linkedin.com/in/isabelly-moreira-28bb2b269"
+          >
+            <img src="./assets/linkedIn.svg " />
+            linkedin
+          </a>
+        </div>
+      </section>
+      <img
+        class="apresentacao__imagem"
+        src="./assets/Imagem.png"
+        alt="foto de Jona"
+      />
+    </main>
+    <footer class="rodape">
+      <p>Desenvolvido por Alura.</p>
+    </footer>
+  </body>
 </html>

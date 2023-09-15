@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap");
 
 :root {
-  --cor--primaria: #000000;
   --cor--secundaria: #f6f6f6;
-  --cor--terciaria: #22dafd;
-  --cor--hover: #272727;
+  --cor--terciaria: #77009c;
+  --cor--hover: #390781;
 
   --font--primaria: "Krona One", sans-serif;
   --font--secundaria: "Montserrat, sans-serif";
@@ -18,7 +17,12 @@ body {
   /* height: 100vh; */
   /*  é utilizada para alterar a propriedade padrão da box model, usada para calcular larguras (widths) e alturas */
   box-sizing: border-box;
-  background-color: var(--cor--primaria);
+  background: linear-gradient(
+    135deg,
+    rgba(5, 12, 40, 1) 0%,
+    rgba(53, 3, 128, 1) 35%,
+    rgba(191, 61, 125, 1) 100%
+  );
   color: var(--cor--secundaria);
 }
 
@@ -36,6 +40,28 @@ body {
   font-weight: 600;
   color: var(--cor--terciaria);
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 2px solid var(--cor--terciaria);
+  width: 9.5%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 4.5px 0;
+  text-decoration: none;
+  color: var(--cor--secundaria);
+  font-family: var(--font--secundaria);
+}
+
+.cabecalho__menu__link:hover {
+  transform: scale(120%);
+  transition: all 0.9s;
+}
+
+.conteudo-destaque {
+  color: #d38dff;
 }
 
 /* alterar dentro main */
@@ -105,7 +131,8 @@ body {
 .apresentacao__links__navegacao:hover {
   background-color: var(--cor--hover);
   /* isso paulo ensinou */
-  transition: all 0.9s;
+  transition: all 0.6s;
+  width: 60%;
 }
 
 /* isso paulo ensinou */
@@ -114,7 +141,7 @@ body {
 }
 
 .apresentacao__imagem {
-  width: 50%;
+  width: 53%;
 }
 
 .rodape {
@@ -125,6 +152,10 @@ body {
   font-family: var(--font--secundaria);
   font-size: 24px;
   font-weight: 400;
+}
+
+.imagem {
+  width: 50%;
 }
 
 @media (max-width: 1200px) {
@@ -142,5 +173,10 @@ body {
   }
   .apresentacao__conteudo {
     width: auto;
+  }
+
+  .cabecalho__menu__link {
+    width: 30%;
+    padding: 18.5px 0;
   }
 }
